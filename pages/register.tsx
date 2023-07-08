@@ -11,24 +11,11 @@ import {
   Text,
   Center,
 } from '@mantine/core';
-import React, { forwardRef } from 'react';
 import { useForm } from '@mantine/form';
 import Image from 'next/image';
-import Link from 'next/link';
 import { DatePickerInput } from '@mantine/dates';
 import Layout from '../components/Layout/Layout';
-
-export const NextLink = forwardRef(
-  (
-    { href, ...others }: React.ComponentPropsWithoutRef<typeof Link>,
-    ref: React.ForwardedRef<HTMLAnchorElement>
-  ) => (
-    <Link href={href} passHref>
-      {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
-      <span {...others} ref={ref} />
-    </Link>
-  )
-);
+import NextLink from '../elements/NextLink';
 
 const Register = () => {
   const form = useForm({
@@ -136,7 +123,7 @@ const Register = () => {
                     <Center>
                       <Text>
                         Already have an account?{' '}
-                        <Button type="submit" mx="auto" variant="outline">
+                        <Button type="button" mx="auto" variant="outline">
                           Login Here
                         </Button>
                       </Text>

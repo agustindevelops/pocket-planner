@@ -1,6 +1,8 @@
-import { createStyles, Header, Container, Group, Burger, rem } from '@mantine/core';
+import { createStyles, Header, Container, Group, Burger, rem, Button } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import Link from 'next/link';
+import { useUser } from '@auth0/nextjs-auth0/client';
+import NextLink from '../../../elements/NextLink';
 
 const useStyles = createStyles((theme) => ({
   header: {
@@ -45,15 +47,15 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-interface HeaderSimpleProps {
-  links: { link: string; label: string }[];
-}
+const LINKS: { label: string; link: string }[] = [];
 
-export function HeaderSimple({ links }: HeaderSimpleProps) {
+const CustomHeader = () => {
+  const { user } = useUser();
+
   const [opened, { toggle }] = useDisclosure(false);
   const { classes, cx } = useStyles();
 
-  const items = links.map((link, i) => (
+  const items = LINKS.map((link, i) => (
     <Link
       key={link.label}
       href={link.link}
@@ -69,10 +71,21 @@ export function HeaderSimple({ links }: HeaderSimpleProps) {
         <div>Logo</div>
         <Group spacing={5} className={classes.links}>
           {items}
+          {user ? (
+            <Button color="red" component={NextLink} href="/api/auth/logout">
+              Log Out
+            </Button>
+          ) : (
+            <Button component={NextLink} href="/api/auth/login">
+              Log In
+            </Button>
+          )}
         </Group>
 
         <Burger opened={opened} onClick={toggle} className={classes.burger} size="sm" />
       </Container>
     </Header>
   );
-}
+};
+
+export default CustomHeader;

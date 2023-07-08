@@ -1,23 +1,11 @@
 import { ReactNode } from 'react';
-import { HeaderSimple } from './Header/Home';
+import Header from './Header';
 
-const Layout = ({ children }: { children: ReactNode }) => {
-  const links = [
-    {
-      link: '/register',
-      label: 'Register',
-    },
-    {
-      link: '/login',
-      label: 'Log In',
-    },
-  ];
-  return (
-    <div>
-      <HeaderSimple links={links} />
-      {children}
-    </div>
-  );
-};
+const Layout = ({ children }: { children: ReactNode }) => (
+  <div>
+    <Header />
+    {children}
+  </div>
+);
 
 export default Layout;
