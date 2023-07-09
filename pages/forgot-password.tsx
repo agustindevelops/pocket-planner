@@ -1,5 +1,5 @@
-import Layout from '../components/Layout/Layout';
+import Index from '../components/Layout';
 
-const ForgotPassword = () => <Layout>Forgot Password</Layout>;
+const ForgotPassword = () => <Index>Forgot Password</Index>;
 
 export default ForgotPassword;

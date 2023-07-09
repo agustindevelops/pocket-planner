@@ -1,12 +1,12 @@
 import { Welcome } from '../components/Welcome/Welcome';
 import { ColorSchemeToggle } from '../components/ColorSchemeToggle/ColorSchemeToggle';
-import Layout from '../components/Layout/Layout';
+import Index from '../components/Layout';
 
 const HomePage = () => (
-  <Layout>
+  <Index>
     <Welcome />
     <ColorSchemeToggle />
-  </Layout>
+  </Index>
 );
 
 export default HomePage;

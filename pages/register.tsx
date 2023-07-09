@@ -14,7 +14,7 @@ import {
 import { useForm } from '@mantine/form';
 import Image from 'next/image';
 import { DatePickerInput } from '@mantine/dates';
-import Layout from '../components/Layout/Layout';
+import Index from '../components/Layout';
 import NextLink from '../elements/NextLink';
 
 const Register = () => {
@@ -37,7 +37,7 @@ const Register = () => {
   };
 
   return (
-    <Layout>
+    <Index>
       <Container>
         <Card shadow="sm" padding="xl" style={{ display: 'flex' }}>
           <Grid columns={12} style={{ flex: '1' }}>
@@ -135,7 +135,7 @@ const Register = () => {
           </Grid>
         </Card>
       </Container>
-    </Layout>
+    </Index>
   );
 };
 

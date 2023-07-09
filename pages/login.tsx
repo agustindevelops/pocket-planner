@@ -1,5 +1,5 @@
-import Layout from '../components/Layout/Layout';
+import Index from '../components/Layout';
 
-const Login = () => <Layout>Login Page</Layout>;
+const Login = () => <Index>Login Page</Index>;
 
 export default Login;
