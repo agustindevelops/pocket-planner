@@ -1,7 +1,9 @@
-import { createStyles } from '@mantine/core';
+import { Autocomplete, Grid, createStyles } from '@mantine/core';
 
 export default createStyles((theme) => ({
   root: {
+    width: '100%',
+    height: '100vh',
     backgroundColor: theme.colorScheme === 'dark' ? '#F7EBDB' : '#FFF8EF',
   },
   title: {
@@ -29,5 +31,29 @@ export default createStyles((theme) => ({
     fontFamily: 'Urbanist Regular',
     fontSize: 20,
     fontWeight: 300,
+  },
+  container: {
+    maxWidth: '1240px',
+    padding: '0 1rem',
+    margin: 'auto',
+  },
+  content: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(2, 1fr)',
+  },
+  col1: {
+    padding: '1rem 1rem 1rem 0',
+    height: '70vh',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+  },
+  col2: {
+    padding: '1rem',
+    height: '70vh',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    fontSize: '.8rem',
   },
 }));
