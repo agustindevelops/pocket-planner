@@ -6,10 +6,6 @@ const useStyles = createStyles((theme) => ({
     fontSize: 30,
     fontWeight: 900,
     letterSpacing: -2,
-
-    [theme.fn.smallerThan('md')]: {
-      fontSize: 50,
-    },
   },
   header: {
     display: 'flex',

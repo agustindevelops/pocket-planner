@@ -41,7 +41,7 @@ const CustomHeader = () => {
               {NAV.AUTHENTICATED_USER.AUTH.name}
             </Button>
           ) : (
-            <Button component={NextLink} href={NAV.UNAUTHENTICATED_USER.AUTH.name}>
+            <Button component={NextLink} href={NAV.UNAUTHENTICATED_USER.AUTH.link}>
               {NAV.UNAUTHENTICATED_USER.AUTH.name}
             </Button>
           )}
