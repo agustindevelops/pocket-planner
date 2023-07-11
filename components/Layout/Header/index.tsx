@@ -13,7 +13,7 @@ const useStyles = createStyles((theme) => ({
     justifyContent: 'space-between',
     alignItems: 'center',
     height: '100%',
-    backgroundColor: theme.colorScheme === 'dark' ? '#F7EBDB' : '#FFF8EF',
+    backgroundColor: theme.colorScheme === 'dark' ? '#FFF8EF' : '#FFF8EF',
   },
 
   links: {

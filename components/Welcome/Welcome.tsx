@@ -14,7 +14,7 @@ export function Welcome() {
           <div className={classes.col1}>
             <Title className={classes.title} align="center" mt={100}>
               The Best Way to{' '}
-              <Text inherit variant="gradient" component="span">
+              <Text component="span" className={classes.title2}>
                 Plan Events
               </Text>
             </Title>
@@ -27,18 +27,20 @@ export function Welcome() {
               mx="auto"
               mt="xl"
             >
-              This starter Next.js project includes a minimal setup for server side rendering, if
-              you want to learn more on Mantine + Next.js integration follow{' '}
-              <Anchor href="https://mantine.dev/guides/next/" size="lg">
-                this guide
-              </Anchor>
-              . To get started edit index.tsx file.
+              Pocket Planner. Events, trips, and get-togethers all made easier.
             </Text>
           </div>
           <div className={classes.col2}>
             <div className="emailList">
               <div className="form-container">
-                <p className="sign-in-txt">
+                <img
+                  src="https://tse1.mm.bing.net/th?id=OIP.x561WNnZoegyNzRxVIauEwHaE8&pid=Api"
+                  alt="Picnic"
+                  width="100%"
+                  height="auto"
+                  style={{ borderRadius: '14px' }}
+                />
+                <p className={classes.body}>
                   Join our Mailling List to get Notified When the App is Available
                 </p>
                 <a href="http://pocketplannerapp.com/" rel="noreferrer" target="_blank">
